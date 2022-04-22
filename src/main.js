@@ -1,8 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import AppLayout from "./layout";
+import router from "./router";
+import * as filters from "@/filters";
+import * as directives from "@/derective";
 
-Vue.config.productionTip = false
+import "./scss/style.scss";
 
+Vue.config.devtools = true;
+Vue.use(require("vue-moment"));
+Vue.config.productionTip = false;
+
+/* eslint-disable no-new */
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: "#app",
+  router,
+  filters: {
+    ...filters,
+  },
+  directives: {
+    ...directives,
+  },
+  components: { AppLayout },
+  template: "<AppLayout/>",
+});
