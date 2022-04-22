@@ -4,6 +4,7 @@ import HelloWorld from "@/components/HelloWorld";
 import PostListPage from "@/modules/Post/pages/PostListPage";
 import FormValidatePage from "@/modules/FormValidate/pages/FormValidatePage";
 import VuelidatePage from "@/modules/FormValidate/pages/VuelidatePage";
+import VeevalidatePage from "@/modules/FormValidate/pages/VeevalidatePage";
 
 Vue.use(Router);
 
@@ -45,6 +46,10 @@ export default new Router({
         {
           path: "vuelidate",
           component: VuelidatePage,
+        },
+        {
+          path: "veevalidate",
+          component: VeevalidatePage,
         },
       ],
     },
